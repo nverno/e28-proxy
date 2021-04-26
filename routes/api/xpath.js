@@ -10,8 +10,6 @@ const fetchSource = async ({ url, path, ...params }, res) => {
     return res.status(400).json(response);
   }
 
-  console.log("DEBUG: response: ", response);
-
   const data = await response.text();
   // let doc = new DOMParser().parseFromString(data, "text/html");
   // let nodes = xpath.select(path, doc);
