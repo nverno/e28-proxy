@@ -18,6 +18,9 @@ app.use((req, res, next) => {
     'Access-Control-Allow-Headers',
     'Origin,X-Requested-With,Content-Type,Accept,application/json'
   );
+  res.header(
+    'Access-Control-Allow-Methods', 'OPTIONS,POST,GET'
+  );
   next();
 });
 app.use('/api/xpath', xpath);
